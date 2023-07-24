@@ -3,24 +3,32 @@ import Form from "react-bootstrap/Form";
 
 const Formulario = () => {
   return (
-    <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
+    <Form className="container">
+      <Form.Group className="mb-3 d-flex" controlId="formBasicEmail">
+        <Form.Label> Nombre de mascota</Form.Label>
+        <Form.Control type="text" placeholder="Nombre de mascota" />
+      </Form.Group>
+      <Form.Group className="mb-3 d-flex" controlId="formBasicEmail">
+        <Form.Label> Nombre de dueño</Form.Label>
+        <Form.Control type="text" placeholder="Nombre de dueño" />
+      </Form.Group>
+      <div className="d-flex justify-content-between">
+        <Form.Group className="mb-3 d-flex" controlId="formBasicEmail">
+          <Form.Label> fecha</Form.Label>
+          <Form.Control type="namber" placeholder="fecha" />
+        </Form.Group>
+        <Form.Group className="mb-3 d-flex" controlId="formBasicEmail">
+          <Form.Label> hora</Form.Label>
+          <Form.Control type="namber" placeholder="namber" />
+        </Form.Group>
+      </div>
+      <Form.Group className="mb-3 d-flex" controlId="formBasicEmail">
+        <Form.Label> Sintomas</Form.Label>
+        <Form.Control type="text" placeholder="Describir sintomas" />
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
       <Button variant="primary" type="submit">
-        Submit
+        Agregar nueva cita
       </Button>
     </Form>
   );
