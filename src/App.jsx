@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Formulario from "./componenst/Formulario";
 
 function App() {
-  
   return (
     <>
-     
+      <div>
+        <h1 className="tex-danger">Administrador pacientes veterinaria</h1>
+      </div>{" "}
+      <Formulario></Formulario>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
