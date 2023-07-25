@@ -1,7 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Formulario from "./componenst/Formulario";
+import Formulario from "./components/Formulario";
 import { useEffect, useState } from "react";
+import ArticuloCita from "./components/ArticuloCita";
 
 function App() {
   let citaLocalStorage = JSON.parse(localStorage.getItem("citas")) || [];
@@ -20,6 +21,11 @@ function App() {
         <h1 className="tex-danger">Administrador pacientes veterinaria</h1>
       </div>{" "}
       <Formulario crearCitas={crearCitas}></Formulario>
+      <section className="d-flex justify-content-between mt-5 container">
+        {citasApp.map((cita, index) => (
+          <ArticuloCita key={index} cita={cita}></ArticuloCita>
+        ))}
+      </section>
     </>
   );
 }

@@ -57,7 +57,7 @@ const Formulario = ({ crearCitas }) => {
         <Form.Group className="mb-3 d-flex col-6" controlId="formBasicEmail">
           <Form.Label className="mt-2 me-2"> fecha</Form.Label>
           <Form.Control
-            type="number"
+            type="text"
             name="fecha"
             value={cita.fecha}
             placeholder="fecha"
@@ -67,7 +67,7 @@ const Formulario = ({ crearCitas }) => {
         <Form.Group className="mb-3 d-flex col-6" controlId="formBasicEmail">
           <Form.Label className="mt-2 me-2"> hora</Form.Label>
           <Form.Control
-            type="number"
+            type="text"
             name="hora"
             value={cita.hora}
             placeholder="namber"
