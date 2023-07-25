@@ -13,12 +13,26 @@ const Formulario = ({ crearCitas }) => {
 
   const valorInputs = (e) => {
     setCita({
+      ...cita,
       [e.target.name]: e.target.value,
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    cita.id = new Date().getTime();
+    crearCitas(cita);
+    setCita({
+      nombreDeMascota: "",
+      nombreDeDueño: "",
+      hora: "",
+      fecha: "",
+      sintomas: "",
+    });
+  };
+
   return (
-    <Form className="container">
+    <Form className="container" onSubmit={handleSubmit}>
       <Form.Group className="mb-3 d-flex" controlId="formBasicEmail">
         <Form.Label> Nombre de mascota</Form.Label>
         <Form.Control
@@ -26,6 +40,7 @@ const Formulario = ({ crearCitas }) => {
           name="nombreDeMascota"
           value={cita.nombreDeMascota}
           placeholder="Nombre de mascota"
+          onChange={valorInputs}
         />
       </Form.Group>
       <Form.Group className="mb-3 d-flex" controlId="formBasicEmail">
@@ -35,6 +50,7 @@ const Formulario = ({ crearCitas }) => {
           name="nombreDeDueño"
           value={cita.nombreDeDueño}
           placeholder="Nombre de dueño"
+          onChange={valorInputs}
         />
       </Form.Group>
       <div className="row ">
@@ -45,6 +61,7 @@ const Formulario = ({ crearCitas }) => {
             name="fecha"
             value={cita.fecha}
             placeholder="fecha"
+            onChange={valorInputs}
           />
         </Form.Group>
         <Form.Group className="mb-3 d-flex col-6" controlId="formBasicEmail">
@@ -54,6 +71,7 @@ const Formulario = ({ crearCitas }) => {
             name="hora"
             value={cita.hora}
             placeholder="namber"
+            onChange={valorInputs}
           />
         </Form.Group>
       </div>
@@ -64,6 +82,7 @@ const Formulario = ({ crearCitas }) => {
           name="sintomas"
           value={cita.sintomas}
           placeholder="Describir sintomas"
+          onChange={valorInputs}
         />
       </Form.Group>
 
