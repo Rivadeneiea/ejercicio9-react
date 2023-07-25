@@ -15,6 +15,13 @@ function App() {
   const crearCitas = (cita) => {
     setCitasApp([...citasApp, cita]);
   };
+
+  const borrarCita = (id) => {
+    const crearNuevaCita = citasApp.filter((cita) => cita.id !== id);
+    if (citasApp.id !== id) {
+      setCitasApp(crearNuevaCita);
+    }
+  };
   return (
     <>
       <div>
@@ -23,7 +30,11 @@ function App() {
       <Formulario crearCitas={crearCitas}></Formulario>
       <section className="d-flex justify-content-between mt-5 container">
         {citasApp.map((cita, index) => (
-          <ArticuloCita key={index} cita={cita}></ArticuloCita>
+          <ArticuloCita
+            borrarCita={borrarCita}
+            key={index}
+            cita={cita}
+          ></ArticuloCita>
         ))}
       </section>
     </>

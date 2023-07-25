@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-const ArticuloCita = ({ cita }) => {
+const ArticuloCita = ({ cita, borrarCita }) => {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Body>
@@ -12,7 +12,9 @@ const ArticuloCita = ({ cita }) => {
           {cita.hora}
           {cita.sintomas}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary" onClick={() => borrarCita(cita.id)}>
+          borrar cita
+        </Button>
       </Card.Body>
     </Card>
   );
