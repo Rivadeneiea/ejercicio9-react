@@ -22,21 +22,29 @@ function App() {
       setCitasApp(crearNuevaCita);
     }
   };
+
+  const msj = "No hay citas";
   return (
     <>
       <div>
-        <h1 className="tex-danger">Administrador pacientes veterinaria</h1>
+        <h1 className="text-light text-center">
+          Administrador pacientes veterinaria
+        </h1>
       </div>{" "}
       <Formulario crearCitas={crearCitas}></Formulario>
-      <section className="d-flex justify-content-between mt-5 container">
-        {citasApp.map((cita, index) => (
-          <ArticuloCita
-            borrarCita={borrarCita}
-            key={index}
-            cita={cita}
-          ></ArticuloCita>
-        ))}
-      </section>
+      {citasApp.length === 0 ? (
+        <div className="text-center mt-5 display-6 text-light "> {msj}</div>
+      ) : (
+        <section className="d-flex justify-content-between mt-5 container">
+          {citasApp.map((cita, index) => (
+            <ArticuloCita
+              borrarCita={borrarCita}
+              key={index}
+              cita={cita}
+            ></ArticuloCita>
+          ))}
+        </section>
+      )}
     </>
   );
 }

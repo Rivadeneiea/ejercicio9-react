@@ -12,7 +12,7 @@ const ArticuloCita = ({ cita, borrarCita }) => {
           {cita.hora}
           {cita.sintomas}
         </Card.Text>
-        <Button variant="primary" onClick={() => borrarCita(cita.id)}>
+        <Button variant="danger" onClick={() => borrarCita(cita.id)}>
           borrar cita
         </Button>
       </Card.Body>

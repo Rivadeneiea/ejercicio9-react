@@ -32,7 +32,7 @@ const Formulario = ({ crearCitas }) => {
   };
 
   return (
-    <Form className="container" onSubmit={handleSubmit}>
+    <Form className="container text-light" onSubmit={handleSubmit}>
       <Form.Group className="mb-3 d-flex" controlId="formBasicEmail">
         <Form.Label> Nombre de mascota</Form.Label>
         <Form.Control
@@ -53,9 +53,9 @@ const Formulario = ({ crearCitas }) => {
           onChange={valorInputs}
         />
       </Form.Group>
-      <div className="row ">
+      <div className="row justify-content-between ">
         <Form.Group className="mb-3 d-flex col-6" controlId="formBasicEmail">
-          <Form.Label className="mt-2 me-2"> fecha</Form.Label>
+          <Form.Label className="mt-2 me-5"> fecha</Form.Label>
           <Form.Control
             type="text"
             name="fecha"
@@ -70,13 +70,13 @@ const Formulario = ({ crearCitas }) => {
             type="text"
             name="hora"
             value={cita.hora}
-            placeholder="namber"
+            placeholder="hora"
             onChange={valorInputs}
           />
         </Form.Group>
       </div>
       <Form.Group className="mb-3 d-flex" controlId="formBasicEmail">
-        <Form.Label className="mt-2 me-2"> Sintomas</Form.Label>
+        <Form.Label className="mt-2 me-4"> Sintomas</Form.Label>
         <Form.Control
           type="text"
           name="sintomas"
