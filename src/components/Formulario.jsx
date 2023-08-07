@@ -34,7 +34,7 @@ const Formulario = ({ crearCitas }) => {
   return (
     <Form className="container text-light" onSubmit={handleSubmit}>
       <Form.Group className="mb-3 d-flex" controlId="formBasicEmail">
-        <Form.Label> Nombre de mascota</Form.Label>
+        <Form.Label className="d-flex me-1"> Nombre de mascota</Form.Label>
         <Form.Control
           type="text"
           name="nombreDeMascota"
@@ -44,7 +44,7 @@ const Formulario = ({ crearCitas }) => {
         />
       </Form.Group>
       <Form.Group className="mb-3 d-flex" controlId="formBasicEmail">
-        <Form.Label> Nombre de dueño</Form.Label>
+        <Form.Label className="d-flex me-2"> Nombre de dueño</Form.Label>
         <Form.Control
           type="text"
           name="nombreDeDueño"
@@ -75,7 +75,7 @@ const Formulario = ({ crearCitas }) => {
           />
         </Form.Group>
       </div>
-      <Form.Group className="mb-3 d-flex" controlId="formBasicEmail">
+      <Form.Group className="mb-3  d-flex" controlId="formBasicEmail">
         <Form.Label className="mt-2 me-4"> Sintomas</Form.Label>
         <Form.Control
           type="text"
