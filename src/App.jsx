@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <div>
-        <h1 className="text-light text-center">
+        <h1 className="text-danger text-center">
           Administrador pacientes veterinaria
         </h1>
       </div>{" "}

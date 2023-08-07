@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 
 const ArticuloCita = ({ cita, borrarCita }) => {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card className="bg-dark text-light " style={{ width: "18rem" }}>
       <Card.Body>
         <Card.Title>{cita.nombreDeDueño}</Card.Title>
         <Card.Text>
